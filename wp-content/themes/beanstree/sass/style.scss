@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+  Theme Name:Beans Tree 
+  Description: まめの木専用テーマ
+  Author: Colorful Beans
+  Author URI: https://www.facebook.com/gen.garyu?fref=ts
+  Version: 1.0
+*/
+
+//---------------------------------------------------
+//base
+//---------------------------------------------------
+
+@import "./base/variables";
+@import "./base/reset";
+
+
+//---------------------------------------------------
+//conponents
+//---------------------------------------------------
+
+//parts
+@import "./components/parts/layouts";
+@import "./components/parts/buttons";
+
+//common
+@import "./components/common/header";
+@import "./components/common/menu";
+@import "./components/common/category";
+@import "./components/common/section";
+
+@import "./components/aboutPanel";
+@import "./components/entryPanel";
+@import "./components/imageSlide";
+

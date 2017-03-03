@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.EntryPanel {
+    background: #C2F6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 2% 6% 2%;
+    border-radius: 5%;
+    &__head {
+        padding-left: 20px;
+    }
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    &__item {
+        flex: 0 1 14.9%;
+        margin-right: 2.1%;
+        margin-bottom: 2.1%;
+        &:nth-child(6n) {
+            margin: 0;
+        }
+    }
+    &__thumb {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+    }
+    &__foot {
+        padding-right: 2%;
+        text-align: right;
+    }
+}

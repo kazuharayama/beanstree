@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+//_sanitize.scssをインポート
+@import "./lib/sanitize";
+
+//以下 追加の設定
+:root, html, body {
+    background-color: $color-back;
+    color: $color-main-text;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: $color-main-text;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $color-link;
+}

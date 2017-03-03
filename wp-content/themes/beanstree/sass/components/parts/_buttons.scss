@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.button {
+    display: inline-block;
+    color: $color-reverse-text;
+    background: $color-reverse-back;
+    padding: 7px 12px;
+    font-size: 12px;
+    &:hover {
+        background: $color-reverse-hover;
+        color: #fff;
+    }
+}

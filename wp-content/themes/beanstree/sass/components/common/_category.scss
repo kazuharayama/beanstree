@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.Category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    &__head {
+        display: flex;
+        height: 50px;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__body {
+    }
+    &__thumb {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+.l-columnCate {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 14.9%;
+    margin-right: 2.1%;
+    &:nth-child(6n) {
+            margin:0;
+    }
+}

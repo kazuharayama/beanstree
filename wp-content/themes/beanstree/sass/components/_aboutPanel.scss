@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.AboutPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__head {
+        justify-content: center;
+        margin: 0;
+    }
+    &__sub {
+        flex: 1 1 45%;
+        margin-right: 20px;
+        min-width: 140px;
+    }
+    &__thumb {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 55%;
+        padding: 0;
+    }
+    &__body {
+        font-size: 14px;
+    }
+    &__foot {
+        margin-top: 2%;
+        text-align: right;
+    }
+}
+.l-half {
+    background: #FFFF99;
+    border-radius: 7%;
+    padding: 2% 4% 4% 4%;
+    flex: 1 1 50%;
+    margin-right: 2%;
+    align-self: stretch;
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+}
+.l-rowAbout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

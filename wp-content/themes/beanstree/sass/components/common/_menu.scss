@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.Menu {
+    display: flex;
+    justify-content: flex-end;
+    &__item {
+        display: block;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}

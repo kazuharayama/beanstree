@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.l-box {
+    flex: 0 1 $base-content-width;
+    max-width: $base-content-width;
+    margin: 0 auto;
+    padding: 0 $space-unit;
+}
+.l-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
