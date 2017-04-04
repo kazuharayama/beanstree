@@ -11,6 +11,7 @@
 *****************************************/
 
 get_header(); ?>
+<h3>about page.php</h3>
 <!-- page.php -->
 <div id="main">
 	<?php if ( have_posts() ) : /** WordPress ループ */
@@ -29,5 +30,4 @@ get_header(); ?>
 </div>
 <!-- /main -->
 <!-- /page.php -->
-<?php get_sidebar();
-get_footer(); ?>
+<?php get_footer(); ?>

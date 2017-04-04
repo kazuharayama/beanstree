@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.Contact {
+    display: flex;
+    margin-top: $space-unit/2;
+    margin-bottom: $space-unit/2;
+    &__sub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 24%;
+        margin-right: 2%;
+        background: $color-green;
+        border-radius: 10px;
+        h4 {
+            color: $color-white;
+        }
+    }
+    &__main {
+        display: flex;
+        align-items: center;
+        flex: 0 1 74%;
+        display: flex;
+        padding: $space-unit 0;
+    }
+    &__head {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.formAnnotation {
+    font-size: 14px;
+    margin-top: $space-unit;
+}
+.form-submit {
+    text-align: center;
+    margin-top: $space-unit*2;
+    margin-bottom: $space-unit*2;
+    input {
+        padding: 5px 20px;
+        background: $color-green;
+        color: $color-white;
+        border-style: none;
+    }
+}

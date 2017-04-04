@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.CategoryTop {
+    padding: $space-unit 0;
+    &__head {
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__body {
+        p {
+            margin: 0;
+        }
+    }
+}

@@ -14,6 +14,9 @@
 @import "./base/variables";
 @import "./base/reset";
 
+/* import font awsome file */
+@import "./fonts/font-awesome.scss";
+
 
 //---------------------------------------------------
 //conponents
@@ -22,14 +25,23 @@
 //parts
 @import "./components/parts/layouts";
 @import "./components/parts/buttons";
+@import "./components/parts/labels";
 
 //common
 @import "./components/common/header";
 @import "./components/common/menu";
+@import "./components/common/entryPanel";
 @import "./components/common/category";
 @import "./components/common/section";
+@import "./components/common/eventPanel";
+@import "./components/common/footer";
 
 @import "./components/aboutPanel";
-@import "./components/entryPanel";
 @import "./components/imageSlide";
+@import "./components/price";
+@import "./components/qa";
+@import "./components/contact";
+@import "./components/single";
+@import "./components/categoryTop";
+@import "./components/event";
 

@@ -1,13 +1,36 @@
 @charset "UTF-8";
 
-.button {
+.button-w {
     display: inline-block;
     color: $color-reverse-text;
     background: $color-reverse-back;
     padding: 7px 12px;
-    font-size: 12px;
+    font-size: 14px;
     &:hover {
         background: $color-reverse-hover;
+        color: $color-main-text;
+    }
+}
+.button-g {
+    display: inline-block;
+    color: $color-white;
+    background: $color-green-deep;
+    padding: 7px 12px;
+    font-size: 14px;
+    &:hover {
+        background: $color-green-pale;
+        color: #fff;
+    }
+}
+.button-g-b {
+    display: inline-block;
+    color: $color-white;
+    background: $color-green-deep;
+    padding: 20px 60px;
+    font-size: 16px;
+    border-radius: 10px;
+    &:hover {
+        background: $color-green-pale;
         color: #fff;
     }
 }

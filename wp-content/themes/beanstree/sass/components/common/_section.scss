@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
 .Section {
-    margin-bottom: 2%;
+    margin-bottom: $space-unit*5/2;
+}
+
+.C-Section {
+    margin-top: $space-unit;
+    margin-bottom: $space-unit;
 }

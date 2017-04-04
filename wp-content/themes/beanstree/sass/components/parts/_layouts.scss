@@ -6,10 +6,12 @@
     margin: 0 auto;
     padding: 0 $space-unit;
 }
-.l-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.l-box2 {
+    flex: 0 1 $base-content-width;
+    max-width: $base-content-width;
     margin: 0 auto;
+    padding: 0;
+}
+.HeadSpace {
+    margin-top: $space-unit;
 }

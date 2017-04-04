@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.EventPanel {
+    padding: $space-unit $space-unit $space-unit $space-unit;
+    display:flex;
+    flex-wrap: wrap;
+    &__head {
+        flex: 1 0 100%
+    }
+    &__main {
+        flex: 0 1 49%;
+        align-self: stretch;
+        justify-content: space-between;
+        margin-right: 2%;
+        margin-bottom: 3%;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+    &__title {
+    }
+    &__title--text {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__body {
+        a img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+    // &__thumb {
+    //     width: 100%;
+    //     height: auto;
+    //     border-radius: 10px;
+    // }
+    &__foot {
+        font-size: 14px;
+    }
+}

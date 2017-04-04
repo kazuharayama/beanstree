@@ -1,0 +1,144 @@
+
+ 		<div class="EntryPanel__head">
+    		<h3>まめの木情報局</h3>
+    	</div>
+    	<div class="EntryPanel__body">
+		<?php if ( have_posts() ) :
+				// main loop
+				while ( have_posts() ) : the_post(); ?>
+				  <div class="EntryPanel__item"><?php echo get_the_post_thumbnail(get_the_ID(), array('class' => 'EntryPanel__thumb')); ?></div>
+			<?php 
+			    endwhile;
+			else :  ?>
+				  <div class="post">
+					<h2>記事はありません</h2>
+					<p>お探しの記事は見つかりませんでした。</p>
+				  </div>
+		<?php
+			endif; ?>
+		</div>
+		<div class="EntryPanel__foot Section">
+    		<a class="button" href="">もっと見る</a>
+    	</div>
+    	
+    	
+    	<div class="EntryPanel__head">
+    		<h3>まめの木情報局</h3>
+    	</div>
+    	<div class="EntryPanel__body">
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+	    	<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    		<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+	    	<div class="EntryPanel__item"><img class="EntryPanel__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>"></div>
+    	</div>
+    	<div class="EntryPanel__foot Section">
+    		<a class="button" href="">もっと見る</a>
+    	</div>
+    	   <div class="l-columnCate">
+	    		<div class="Category__head">
+	    			<h4>学校便り</h4>
+	    		</div>
+	    		<div class="Category__body">
+    				<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+	    		</div>
+	    	</div>
+    		<div class="l-columnCate">
+	    		<div class="Category__head">
+	    			<h4>農業日誌</h4>
+	    		</div>
+	    		<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+	    		</div>
+    		</div>
+    		<div class="l-columnCate">
+	    		<div class="Category__head">
+	    			<h4>カフェ作り</h4>
+	    		</div>
+	    	<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+	    		</div>
+	    	</div>
+    		<div class="l-columnCate">
+	    		<div class="Category__head">
+	    			<h4>WWOOF便り</h4>
+	    		</div>
+    			<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+	    		</div>
+	    	</div>
+    		<div class="l-columnCate">
+	    		<div class="Category__head">
+	    			<h4>まめの木祭り</h4>
+    			</div>
+	    		<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+	    		</div>
+    		</div>
+    		<div class="l-columnCate">
+    			<div class="Category__head">
+    				<h4>サマーキャンプ</h4>
+    			</div>
+	    		<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+		    	</div>
+	    	</div>
+	    	<div class="l-columnCate">
+	    		<div class="Category__head">
+    				<h4>まめの木の人々</h4>
+	    		</div>
+	    		<div class="Category__body">
+    				<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+    			</div>
+    		</div>
+    		<div class="l-columnCate">
+    			<div class="Category__head">
+	    			<h4>ワークショップ</h4>
+	    		</div>
+    			<div class="Category__body">
+	    			<img class="Category__thumb" src="<?php echo get_template_directory_uri().'/images/thumb.png' ?>">
+    			</div>
+    		</div>
+    		
+    		
+    	<div class="EventPanel__main">
+			<div class="EventPanel__title">
+				<h4 class="EventPanel__title--text">綿作りワークショップ</h4>
+			</div>
+			<div class="EventPanel__body">
+				<img class="EventPanel__thumb" src=<?php echo get_template_directory_uri().'/images/workShop.png' ?> alt="">
+			</div>
+			<div class="EventPanel__foot">
+				綿花から糸を作るまでのワークショップを行います。綿花から糸を作るまでのワークショップを行います。
+			</div>
+		</div>
+		<div class="EventPanel__main">
+			<div class="EventPanel__title">
+				<h4 class="EventPanel__title--text">ピザ焼き体験</h4>
+			</div>
+			<div class="EventPanel__body">
+				<img class="EventPanel__thumb" src=<?php echo get_template_directory_uri().'/images/workShop.png' ?> alt="">
+			</div>
+			<div class="EventPanel__foot">
+				ご自身で生地を伸ばしてトッピングして焼きませんか？
+			</div>
+		</div>
+		<div class="EventPanel__main">
+			<div class="EventPanel__title">
+				<h4 class="EventPanel__title--text">まめの木祭り</h4>
+			</div>
+			<div class="EventPanel__body">
+				<img class="EventPanel__thumb" src=<?php echo get_template_directory_uri().'/images/workShop.png' ?> alt="">
+			</div>
+			<div class="EventPanel__foot">
+				○月に開催される屋外イベントの詳細です。ただいま出店者、ミュージシャン、参加者募集中！
+			</div>
+		</div>

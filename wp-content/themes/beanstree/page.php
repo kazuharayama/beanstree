@@ -3,12 +3,6 @@
 
 	page.php
 
-	固定ページを表示するための
-	テンプレートファイルです。
-
-	page.php のコードに関しては、
-	CHAPTER 12 で詳しく解説しています。
-
 *****************************************/
 
 get_header(); ?>
@@ -30,5 +24,4 @@ get_header(); ?>
 </div>
 <!-- /main -->
 <!-- /page.php -->
-<?php get_sidebar();
-get_footer(); ?>
+<?php get_footer(); ?>

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.SectionLabel {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    &::after {
+        content: '';
+        display: flex;
+        flex: 1 0 10%;
+        border-bottom: 1px solid $color-green;
+        height: 0;
+        margin-left: 20px;
+    }
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__color {
+            color: $color-green;
+    }
+    &__image {
+            margin-right: 5px;
+    }
+}
+
+.SectionLabel-2 {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    &::after {
+        content: '';
+        display: flex;
+        flex: 1 0 10%;
+        border-bottom: 1px solid $color-green;
+        height: 0;
+        margin-left: 20px;
+    }
+    &::before {
+        content: '';
+        display: flex;
+        flex: 1 0 10%;
+        border-bottom: 1px solid $color-green;
+        height: 0;
+        margin-right: 20px;
+    }
+}

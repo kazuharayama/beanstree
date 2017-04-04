@@ -1,0 +1,30 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    &__sub {
+        flex: 1 1 auto;
+    }
+    &__thumb {
+        width: 100%;
+        height: auto;
+    }
+    &__main {
+        flex: 1 1 auto;
+        background: $color-green-deep;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__head {
+        padding-top: $space-unit;
+        padding-left: $space-unit;
+    }
+    &__body {
+        font-size: 12px;
+        color: $color-white;
+    }
+    &__foot {
+        padding-right: $space-unit*3;
+    }
+}
