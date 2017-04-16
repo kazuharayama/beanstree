@@ -109,12 +109,7 @@ $custum_comment_args = array(
 function beans_scripts() {
   	wp_deregister_script('jquery');
 	  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4');
-	 // wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array(), '1.12.1');
-	 // wp_enqueue_script('javascript', get_template_directory_uri().'/js/jquery-easing.js', array(), '1.13');
     wp_enqueue_script( 'javascript',get_template_directory_uri().'/js/beans.js', array('jquery'),'1.0');
-    if( is_singular( 'workshops' ) ) {
-				//wp_enqueue_script( 'javascript',get_template_directory_uri().'/js/beans-single-workshop.js', array('jquery'),'1.0');
-		}
 }
 add_action( 'wp_enqueue_scripts', 'beans_scripts' );
 ?>

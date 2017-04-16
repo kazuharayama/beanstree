@@ -1,10 +1,5 @@
 $(function() {
     
-    // $.fn.log = function() {
-    //     console.log.apply(console, this);
-    //     return this;
-    // };
-    
     var setElm = $('.ImageSlide__cover--main'),
         slideSpeed = 500,
         slideDelay = 5000,
@@ -13,6 +8,7 @@ $(function() {
         openingFade = 1000;
     
     $(window).on('load', function() {
+        
         setElm.each(function() {
             var self        = $(this),
                 findUl      = self.find('ul'),
@@ -20,6 +16,13 @@ $(function() {
                 findLiCount = findLi.length,
                 findImg     = findLi.find('img'),
                 slideTimer;
+            
+            //イメージ画像の変更
+            if (findImg.width() > $(window).width()) {
+                findImg.width($(window).width());
+            } else if (findImg.width() < $(window).width()) {
+                findImg.width(slideMaxWidth);
+            }
             
             findLi.each(function(i){
                 $(this).attr('class', 'viewList' + (i + 1));
@@ -41,7 +44,7 @@ $(function() {
                 
                 var allList = findWrap.find('li'),
                 allListCount = allList.length;
-                
+
                 var imgWidth  = findImg.width(),
                     imgHeight = findImg.height();
                     
@@ -58,8 +61,6 @@ $(function() {
                 //page Nation
                 var pageNation = $('<div class="ImageSlide__cover--main--pageNation"></div>');
                 self.append(pageNation);
-                console.log('self' + self.width());
-                console.log('self' + self.height());
                 
                 findLi.each(function(i){
                     pageNation.append('<a href="javascript:void(0);" class="pn' + (i+1) + '"></a>');
@@ -67,21 +68,21 @@ $(function() {
                 
                 // function setSlideSize() {
                 //     var wdWidth = $(window).width();
-                //     var setSizeWidth = wdWidth;
-                    
-                //     console.log('window size' + $(window).width());
                     
                 //     if (slideMaxWidth >= wdWidth || slideMaxWidth == 0) {
-                //         allList.css({width:wdWidth});
-                //         findImg.css({width:wdWidth});
-                //         baseWrapWidth = wdWidth * findLiCount;
-                //         allWrapWidth = wdWidth * allListCount;
+                //     //     allList.css({width:wdWidth});
+                //     //     findImg.css({width:wdWidth});
+                //     //     baseWrapWidth = wdWidth * findLiCount;
+                //     //     allWrapWidth = wdWidth * allListCount;
+                //         console.log('slideMaxWidth' + $(window).width());
                 //     } else if (slideMaxWidth < wdWidth) {
                 //         allList.css({width:slideMaxWidth});
                 //         findImg.css({width:slideMaxWidth});
                 //         baseWrapWidth = slideMaxWidth * findLiCount;
                 //         allWrapWidth = slideMaxWidth * allListCount;
-                //         setSizeWidth = slideMaxWidth;
+                        
+                //         var setSizeWidth = slideMaxWidth;
+                //         console.log('wdwidth' + $(window).width());
                 //     }
                     
                 //     imgWidth = setSizeWidth;
@@ -149,9 +150,6 @@ $(function() {
                     btnPrev        = self.find('.ImageSlide__cover--main--btnPrev'),
                     posResetNext    = -(baseWrapWidth) * 2,
                     posResetPrev     = -(baseWrapWidth) + (imgWidth);
-                    
-                    console.log("baseWrapWidth" + baseWrapWidth);
-                    console.log("posResetNext" + posResetNext);
                     
                 function slideNavSize() {
                     var slideWidth  = self.width(),
@@ -347,18 +345,37 @@ $(function() {
             
             self.css({visibility:'visible', opacity:'0'}).animate({opacity:'1'}, openingFade);
                 
-            // $(window).on('load resize', function(){
-            //     timerStop();
-            //     //setSlideSize();
+            $(window).on('load resize', function() {
+                var reSizeRate = 0;
+                //イメージ画像の変更
+                if (findImg.width() > $(window).width()) {
+                    findImg.width($(window).width());
+                    reSizeRate = findImage.width() / $(window).width();
+                    
+                    console.log('reSizeRate' + reSizeRate);
+                } else if (findImg.width() < $(window).width()) {
+                    findImg.width(slideMaxWidth);
+                }
                 
-            //     var posActive = pageNation.find('.pnActive'),
-            //         setNum    = pnPoint.index(posActive),
-            //         moveLeft  = ((imgWidth) * (setNum)) + baseWrapWidth;
+                console.log('AAAAA');
                 
-            //     findWrap.css({left: -(moveLeft)});
-                
-            //     timerStart();
-            // });
+                //リサイズ時の再計算
+                baseWrapWidth = imgWidth * findLiCount,
+                allWrapWidth  = imgWidth * allListCount;
+                    
+                findWrap.css({left:-(baseWrapWidth), width:allWrapWidth, height:imgHeight});
+                findWrap.find('ul').css({width:baseWrapWidth,height:imgHeight});
+                //     timerStop();
+                //     //setSlideSize();
+                    
+                //     var posActive = pageNation.find('.pnActive'),
+                //         setNum    = pnPoint.index(posActive),
+                //         moveLeft  = ((imgWidth) * (setNum)) + baseWrapWidth;
+                    
+                //     findWrap.css({left: -(moveLeft)});
+                    
+                //     timerStart();
+            });
         });
      });
 });
